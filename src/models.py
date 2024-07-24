@@ -72,7 +72,7 @@ class Favorite(Base):
     character_id = Column(Integer, ForeignKey('character.id'))
     planet_id = Column(Integer, ForeignKey('planet.id'))
     vehicle_id = Column(Integer, ForeignKey('vehicle.id'))
-    user_id = Column(Integer, ForeignKey('user.id'))
+    user_id = Column(Integer, ForeignKey('user.id'),nullable=False)
 
     def to_dict(self):
         return {}
